@@ -4,13 +4,13 @@ OffersServices::Application.routes.draw do
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
+  # Keep in mind you can assign values other than :controllers and :action
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
+  # Sample resource route (maps HTTP verbs to controllers actions automatically):
   #   resources :products
 
   # Sample resource route with options:
@@ -50,9 +50,11 @@ OffersServices::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
 
-  # See how all your routes lay out with "rake routes"
+  # See how all your routing lay out with "rake routing"
 
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  # This is a legacy wild controllers route that's not recommended for RESTful applications.
+  # Note: This route will make all actions in every controllers accessible via GET requests.
+  # match ':controllers(/:action(/:id))(.:format)'
+
+  match "api/v:api_version/:slug/:controller", constraints: { api_version: /\d+/ }, action: :index
 end
