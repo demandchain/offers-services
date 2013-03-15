@@ -20,14 +20,15 @@ gem 'mysql2'
 # gem 'capistrano'
 
 # To use debugger
- gem 'debugger'
+# gem 'debugger'
  gem 'workflow'
  gem 'simplecov', :require => false, :group => :test
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.0', :require => false
 #  gem 'simplecov', :require => false
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
+  gem "faker"
 end
 
 group :test do

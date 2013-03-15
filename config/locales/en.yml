@@ -3,3 +3,5 @@
 
 en:
   hello: "Hello world"
+  bad_region: "The region %{region_slug} does not exist"
+  bad_version: "The API version %{api_version} is not suported"
